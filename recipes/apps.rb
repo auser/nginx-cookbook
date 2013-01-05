@@ -6,6 +6,7 @@ node[:nginx][:apps].each do |app_name, app_attributes|
     locations             app_attributes[:locations]
     upstreams             app_attributes[:upstreams]
     upstream_keepalive    app_attributes[:upstream_keepalive]
+    rewrites              app_attributes[:rewrites]
     try_files             app_attributes[:try_files]
     client_max_body_size  app_attributes[:client_max_body_size]
     keepalive_timeout     app_attributes[:keepalive_timeout]

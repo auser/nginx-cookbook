@@ -7,6 +7,7 @@ attribute :public_path,           :kind_of => String
 attribute :locations,             :kind_of => Array,   :default => []
 attribute :upstreams,             :kind_of => Array,   :default => []
 attribute :upstream_keepalive,    :kind_of => Fixnum,  :default => 4
+attribute :rewrites,              :kind_of => Array,   :default => []
 attribute :try_files,             :kind_of => Array,   :default => [] # $uri/index.html $uri "@#{@app.name}"
 attribute :client_max_body_size,  :kind_of => String,  :default => "16M"
 attribute :keepalive_timeout,     :kind_of => Fixnum,  :default => 10
