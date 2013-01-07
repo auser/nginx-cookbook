@@ -250,6 +250,9 @@ default[:nginx][:ssl][:ciphers]               = "RC4:HIGH:!aNULL:!MD5"
 default[:nginx][:ssl][:prefer_server_ciphers] = "on"
 
 
+### Custom config
+default[:nginx][:timer_resolue]               = "100ms"
+
 
 ### Global proxy configuration
 #
