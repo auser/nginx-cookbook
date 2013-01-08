@@ -15,11 +15,11 @@ server {
   <% @app.listen.each do |listen| -%>
   listen <%= listen %>;
   <% end %>
-  <% if @app.rewrites.any? %>
-    <% @app.rewrites.each do |rw| -%>
-  rewrite <%= rw -%>
-    <% end -%>
+  
+  <% @app.rewrites.each do |rw| -%>
+  rewrite <%= rw -%>;
   <% end %>
+  
   server_name <%= @app.server_name %>;
   <% if @app.public_path -%>
   root <%= @app.public_path %>;
